@@ -29,7 +29,6 @@ app.get("/delete-category", (req, res) => {
 		res.send("Please provide a id");
 	}
 });
-
 app.listen(4000, () => {
 	console.log("Server Started at port 3000");
 });
