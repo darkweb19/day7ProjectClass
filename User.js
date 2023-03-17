@@ -61,9 +61,6 @@ class User {
 		});
 	}
 }
-
-// const ram = new User("Ram");
-// ram.save();
 // User.deleteById(2);
 // console.log(User.find());
 
