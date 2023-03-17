@@ -60,5 +60,5 @@ app.get("/delete-user/:id", (req, res) => {
 });
 
 app.listen(4040, () => {
-	console.log("server at 4000");
+	console.log("server at 4040");
 });
