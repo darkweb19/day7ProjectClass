@@ -27,7 +27,7 @@
 // 		res.send("Please provide name");
 // 	}
 // });
-// //get method to delete a user
+// get method to delete a user
 // app.get("/delete-user", (req, res) => {
 // 	if (req.query.id) {
 // 		users = users.filter((user) => {
@@ -44,7 +44,6 @@
 // });
 
 //!task  Implementing from class
-
 const express = require("express");
 const app = express();
 const User = require("./User");
@@ -71,6 +70,7 @@ app.get("/delete-user", (req, res) => {
 	User.deleteById(req.query.id);
 	res.send("User deleted");
 });
+
 app.listen(3000, () => {
 	console.log("Server started at 3000");
 });
