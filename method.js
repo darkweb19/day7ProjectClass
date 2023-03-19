@@ -3,7 +3,13 @@
 const User = require("./User");
 const express = require("express");
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+	res.redirect("/user");
+});
+
 app.get("/user", (req, res) => {
 	const users = User.find();
 	res.send(`
@@ -50,6 +56,7 @@ app.post("/user", (req, res) => {
 		res.redirect("/user");
 	} catch (err) {
 		res.send(err.message);
+		res.redirect("/user");
 	}
 });
 
@@ -59,6 +66,6 @@ app.get("/delete-user/:id", (req, res) => {
 	res.redirect("/user");
 });
 
-app.listen(4040, () => {
-	console.log("server at 4040");
+app.listen(3000, () => {
+	console.log("server at 3000");
 });
